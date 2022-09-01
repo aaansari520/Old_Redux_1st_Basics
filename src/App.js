@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { SelectSong } from "./actions";
+import SongList from "./components/SongList";
+import SongDetail from "./components/SongDetail";
 
-function App() {
+// const createPolicy = (name, amount) => {
+//   return {
+//     type: "CREATE_POLICY",
+//     payload: {
+//       name: name,
+//       amount: amount,
+//     },
+//   };
+// };
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="ui container grid">
+      <div className="ui row">
+        <div className="column eight wide">
+          <SongList />
+        </div>
+        <div className="column eight wide">
+          <SongDetail />
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
